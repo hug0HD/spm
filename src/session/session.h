@@ -1,0 +1,4 @@
+#ifndef SPM_SESSION_TIMEOUT_H
+#define SPM_SESSION_TIMEOUT_H
+
+#endif
