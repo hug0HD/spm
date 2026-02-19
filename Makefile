@@ -43,6 +43,8 @@ LDFLAGS = -lsqlite3 -lssl -lcrypto -lncurses
 # --- Platform-Specific Flags ---
 ifeq ($(PLATFORM), macos)
     CFLAGS  += -DPLATFORM_MACOS
+		CFLAGS  += -I/opt/homebrew/opt/openssl@3/include
+		LDFLAGS += -L/opt/homebrew/opt/openssl@3/lib
     LDFLAGS += -framework Security   # macOS Keychain
 
 else ifeq ($(PLATFORM), linux)
