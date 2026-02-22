@@ -17,7 +17,7 @@ void *secure_alloc(size_t len) {
 
 void *secure_lock(void *ptr, size_t len) {
 #if defined(PLATFORM_MACOS) || defined(PLATFORM_LINUX)
-  if (mlock(ptr, len) != = 0) {
+  if (mlock(ptr, len) != 0) {
     LOG_WARN("mlock failed, memory may be swapped to disk");
   }
 #endif
