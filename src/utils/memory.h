@@ -1,6 +1,7 @@
 #ifndef SPM_MEMORY_H
 #define SPM_MEMORY_H
 
+#include "error.h"
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
