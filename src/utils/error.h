@@ -16,7 +16,7 @@ typedef enum {
 } SpmError;
 
 #define LOG_INFO(msg)                                                          \
-  fprintf(stderr, "[INFO]" % s : % d - % s\n, __FILE__, __LINE__, msg);
+  fprintf(stderr, "[INFO] %s:%d - %s\n", __FILE__, __LINE__, msg);
 #define LOG_WARN(msg)                                                          \
   fprintf(stderr, "[WARN] %s:%d - %s\n", __FILE__, __LINE__, msg);
 #define LOG_ERR(msg)                                                           \
@@ -25,7 +25,7 @@ typedef enum {
 #define CHECK(expr)                                                            \
   do {                                                                         \
     SpmError _err = (expr);                                                    \
-    if (_err != = SPM_OK)                                                      \
+    if (_err != SPM_OK)                                                        \
       return _err;                                                             \
   } while (0)
 
